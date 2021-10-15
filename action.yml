@@ -1,0 +1,87 @@
+---
+name: 'kustomize'
+description: 'Build manifests based on Kustomize'
+author: 'actionhippie'
+
+inputs:
+  stack_trace:
+    description: |
+      Print a stack-trace on error
+    required: false
+    default: "false"
+
+  enable_alpha_plugins:
+    description: |
+      Enable Kustomize alpha plugins
+    required: false
+    default: "false"
+
+  enable_exec:
+    description: |
+      Enable support for exec functions
+    required: false
+    default: "false"
+
+  enable_helm:
+    description: |
+      Enable Helm inflator generator
+    required: true
+    default: "false"
+
+  enable_managedby_label:
+    description: |
+      Inject app.kubernetes.io/managed-by labels
+    required: true
+    default: "false"
+
+  enable_star:
+    description: |
+      Enable support for starlark functions
+    required: true
+    default: "false"
+
+  load_restrictor:
+    description: |
+      Override load restrictions
+    required: true
+
+  reorder:
+    description: |
+      Reorder resources before output
+    required: true
+
+  path:
+    description: |
+      Path to read, defaults to current directory
+    required: false
+
+  print:
+    description: |
+      Print messages directly, defaults to `true`
+    required: false
+    default: "true"
+
+  version:
+    description: |
+      Use a specific version of Kustomize
+    required: false
+
+  helm:
+    description: |
+      Use a specific version of Helm
+    required: false
+
+  ksops:
+    description: |
+      Use a specific version of Ksops
+    required: false
+
+outputs:
+  manifest:
+    description: Generated manifest for Kubernetes
+
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/actionhippie/kustomize:v1'
+
+...

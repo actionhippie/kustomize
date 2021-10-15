@@ -1,0 +1,122 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+download_kustomize() {
+    local version=${1}
+
+    case "$(arch)" in
+    "x86_64")
+        local url="https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv${version}/kustomize_v${version}_linux_amd64.tar.gz"
+        ;;
+    "aarch64")
+        local url="https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv${version}/kustomize_v${version}_linux_arm64.tar.gz"
+        ;;
+     esac
+
+    echo "Downloading kustomize v${version}"
+    curl -sSLo- ${url} | tar -xzf - \
+        -C /usr/local/bin
+}
+
+download_helm() {
+    local version=${1}
+
+    case "$(arch)" in
+    "x86_64")
+        local url="https://get.helm.sh/helm-v${version}-linux-amd64.tar.gz"
+        ;;
+    "aarch64")
+        local url="https://get.helm.sh/helm-v${version}-linux-arm64.tar.gz"
+        ;;
+     esac
+
+    echo "Downloading helm v${version}"
+    curl -sSLo- ${url} | tar -xzf - \
+        --exclude LICENSE \
+        --exclude README.md \
+        -C /usr/local/bin
+}
+
+download_ksops() {
+    local version=${1}
+
+    case "$(arch)" in
+    "x86_64")
+        local url="https://github.com/viaduct-ai/kustomize-sops/releases/download/v${version}/ksops_${version}_Linux_x86_64.tar.gz"
+        ;;
+    "aarch64")
+        local url="https://github.com/viaduct-ai/kustomize-sops/releases/download/v${version}/ksops_${version}_Linux_arm64.tar.gz"
+        ;;
+     esac
+
+    echo "Downloading ksops v${version}"
+    curl -sSLo- ${url} | tar -xzf - \
+        --exclude LICENSE \
+        --exclude README.md \
+        -C ${XDG_CONFIG_HOME}/kustomize/plugin/viaduct.ai/v1/ksops
+}
+
+if [[ -n "${INPUT_VERSION}" && "${INPUT_VERSION}" != "${KUSTOMIZE_VERSION}" ]]; then
+    download_kustomize ${INPUT_VERSION}
+fi
+
+if [[ -n "${INPUT_HELM}" && "${INPUT_HELM}" != "${HELM_VERSION}" ]]; then
+    download_helm ${INPUT_HELM}
+fi
+
+if [[ -n "${INPUT_KSOPS}" && "${INPUT_KSOPS}" != "${KSOPS_VERSION}" ]]; then
+    download_ksops ${INPUT_KSOPS}
+fi
+
+EXIT_CODE=0
+pushd "${GITHUB_WORKSPACE}" >/dev/null
+    ARGS=()
+
+    if [[ "${INPUT_STACK_TRACE}" == "true" || "${INPUT_STACK_TRACE}" == "1" ]]; then
+        ARGS+=(--stack-trace)
+    fi
+
+    if [[ "${INPUT_ENABLE_ALPHA_PLUGINS}" == "true" || "${INPUT_ENABLE_ALPHA_PLUGINS}" == "1" ]]; then
+        ARGS+=(--enable-alpha-plugins)
+    fi
+
+    if [[ "${INPUT_ENABLE_EXEC}" == "true" || "${INPUT_ENABLE_EXEC}" == "1" ]]; then
+        ARGS+=(--enable-exec)
+    fi
+
+    if [[ "${INPUT_ENABLE_HELM}" == "true" || "${INPUT_ENABLE_HELM}" == "1" ]]; then
+        ARGS+=(--enable-helm)
+    fi
+
+    if [[ "${INPUT_ENABLE_MANAGEDBY_LABEL}" == "true" || "${INPUT_ENABLE_MANAGEDBY_LABEL}" == "1" ]]; then
+        ARGS+=(--enable-managedby-label)
+    fi
+
+    if [[ "${INPUT_ENABLE_STAR}" == "true" || "${INPUT_ENABLE_STAR}" == "1" ]]; then
+        ARGS+=(--enable-star)
+    fi
+
+    if [[ -n "${INPUT_LOAD_RESTRICTOR}" ]]; then
+        ARGS+=(--load-restrictor "${INPUT_LOAD_RESTRICTOR}")
+    fi
+
+    if [[ -n "${INPUT_REORDER}" ]]; then
+        ARGS+=(--reorder "${INPUT_REORDER}")
+    fi
+
+    if [[ -n "${INPUT_PATH}" ]]; then
+        ARGS+=("${INPUT_PATH}")
+    fi
+
+    set +e
+    OUTPUT=$(kustomize build "${ARGS[@]}")
+    EXIT_CODE=${?}
+    set -e
+
+    echo "::set-output name=manifest::${OUTPUT}"
+
+    if [[ "${INPUT_PRINT}" == "true" || "${INPUT_PRINT}" == "1" ]]; then
+        echo "${OUTPUT}"
+    fi
+popd >/dev/null
+exit ${EXIT_CODE}
