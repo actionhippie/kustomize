@@ -1,4 +1,4 @@
-FROM alpine:3.14 as build
+FROM alpine:3.15 as build
 
 # renovate: datasource=github-releases depName=kubernetes-sigs/kustomize
 ENV KUSTOMIZE_VERSION=4.4.0
@@ -26,7 +26,7 @@ RUN apk add -U curl && \
     *) echo >&2 "error: unsupported architecture '${TARGETARCH}'"; exit 1 ;; \
     esac
 
-FROM alpine:3.14
+FROM alpine:3.15
 ENV XDG_CONFIG_HOME=/usr/local/config
 
 # renovate: datasource=github-releases depName=kubernetes-sigs/kustomize
