@@ -11,7 +11,7 @@ ENV KSOPS_VERSION=3.0.1
 
 ARG TARGETARCH
 
-RUN apk add -U curl && \
+RUN apk add --no-cache curl && \
     case "${TARGETARCH}" in \
     'amd64') \
         curl -sSLo- https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv${KUSTOMIZE_VERSION}/kustomize_v${KUSTOMIZE_VERSION}_linux_amd64.tar.gz | tar -xzf - -C /tmp; \
