@@ -27,6 +27,18 @@ jobs:
 
 ## Inputs
 
+### `args`
+
+Override all kustomize arguments
+
+### `target`
+
+Optional path to write output into
+
+### `workingdir`
+
+Switch into this directory before execution
+
 ### `stack_trace`
 
 Print a stack-trace on error
@@ -78,6 +90,10 @@ Use a specific version of Helm
 ### `ksops`
 
 Use a specific version of Ksops
+
+### `gpgkey`
+
+Private GnuPG key for KSOPS integration
 
 ## Outputs
 

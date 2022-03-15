@@ -4,6 +4,21 @@ description: 'Build manifests based on Kustomize'
 author: 'actionhippie'
 
 inputs:
+  args:
+    description: |
+      Override all kustomize arguments
+    required: false
+
+  target:
+    description: |
+      Optional path to write output into
+    required: false
+
+  workingdir:
+    description: |
+      Switch into this directory before execution
+    required: false
+
   stack_trace:
     description: |
       Print a stack-trace on error
@@ -74,6 +89,11 @@ inputs:
   ksops:
     description: |
       Use a specific version of Ksops
+    required: false
+
+  gpgkey:
+    description: |
+      Private GnuPG key for KSOPS integration
     required: false
 
 outputs:

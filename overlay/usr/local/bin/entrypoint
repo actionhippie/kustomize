@@ -68,52 +68,73 @@ if [[ -n "${INPUT_KSOPS}" && "${INPUT_KSOPS}" != "${KSOPS_VERSION}" ]]; then
     download_ksops ${INPUT_KSOPS}
 fi
 
+if [[ -n "${INPUT_GPGKEY}" ]]; then
+    echo "${INPUT_GPGKEY}" | gpg --batch --import -
+fi
+
 EXIT_CODE=0
-pushd "${GITHUB_WORKSPACE}" >/dev/null
-    ARGS=()
+pushd "${GITHUB_WORKSPACE}/${INPUT_WORKINGDIR}" >/dev/null
+    if [[ -n "${INPUT_ARGS}" ]]; then
+        ARGS=(
+            ${INPUT_ARGS}
+        )
+    else
+        ARGS=(
+            build
+        )
 
-    if [[ "${INPUT_STACK_TRACE}" == "true" || "${INPUT_STACK_TRACE}" == "1" ]]; then
-        ARGS+=(--stack-trace)
-    fi
+        if [[ "${INPUT_STACK_TRACE}" == "true" || "${INPUT_STACK_TRACE}" == "1" ]]; then
+            ARGS+=(--stack-trace)
+        fi
 
-    if [[ "${INPUT_ENABLE_ALPHA_PLUGINS}" == "true" || "${INPUT_ENABLE_ALPHA_PLUGINS}" == "1" ]]; then
-        ARGS+=(--enable-alpha-plugins)
-    fi
+        if [[ "${INPUT_ENABLE_ALPHA_PLUGINS}" == "true" || "${INPUT_ENABLE_ALPHA_PLUGINS}" == "1" ]]; then
+            ARGS+=(--enable-alpha-plugins)
+        fi
 
-    if [[ "${INPUT_ENABLE_EXEC}" == "true" || "${INPUT_ENABLE_EXEC}" == "1" ]]; then
-        ARGS+=(--enable-exec)
-    fi
+        if [[ "${INPUT_ENABLE_EXEC}" == "true" || "${INPUT_ENABLE_EXEC}" == "1" ]]; then
+            ARGS+=(--enable-exec)
+        fi
 
-    if [[ "${INPUT_ENABLE_HELM}" == "true" || "${INPUT_ENABLE_HELM}" == "1" ]]; then
-        ARGS+=(--enable-helm)
-    fi
+        if [[ "${INPUT_ENABLE_HELM}" == "true" || "${INPUT_ENABLE_HELM}" == "1" ]]; then
+            ARGS+=(--enable-helm)
+        fi
 
-    if [[ "${INPUT_ENABLE_MANAGEDBY_LABEL}" == "true" || "${INPUT_ENABLE_MANAGEDBY_LABEL}" == "1" ]]; then
-        ARGS+=(--enable-managedby-label)
-    fi
+        if [[ "${INPUT_ENABLE_MANAGEDBY_LABEL}" == "true" || "${INPUT_ENABLE_MANAGEDBY_LABEL}" == "1" ]]; then
+            ARGS+=(--enable-managedby-label)
+        fi
 
-    if [[ "${INPUT_ENABLE_STAR}" == "true" || "${INPUT_ENABLE_STAR}" == "1" ]]; then
-        ARGS+=(--enable-star)
-    fi
+        if [[ "${INPUT_ENABLE_STAR}" == "true" || "${INPUT_ENABLE_STAR}" == "1" ]]; then
+            ARGS+=(--enable-star)
+        fi
 
-    if [[ -n "${INPUT_LOAD_RESTRICTOR}" ]]; then
-        ARGS+=(--load-restrictor "${INPUT_LOAD_RESTRICTOR}")
-    fi
+        if [[ -n "${INPUT_LOAD_RESTRICTOR}" ]]; then
+            ARGS+=(--load-restrictor "${INPUT_LOAD_RESTRICTOR}")
+        fi
 
-    if [[ -n "${INPUT_REORDER}" ]]; then
-        ARGS+=(--reorder "${INPUT_REORDER}")
-    fi
+        if [[ -n "${INPUT_REORDER}" ]]; then
+            ARGS+=(--reorder "${INPUT_REORDER}")
+        fi
 
-    if [[ -n "${INPUT_PATH}" ]]; then
-        ARGS+=("${INPUT_PATH}")
+        if [[ -n "${INPUT_PATH}" ]]; then
+            ARGS+=("${INPUT_PATH}")
+        fi
     fi
 
     set +e
-    OUTPUT=$(kustomize build "${ARGS[@]}")
+    OUTPUT=$(kustomize "${ARGS[@]}")
     EXIT_CODE=${?}
     set -e
 
-    echo "::set-output name=manifest::${OUTPUT}"
+    OUTPUT_SUBSTITUTE="${OUTPUT}"
+    OUTPUT_SUBSTITUTE="${OUTPUT_SUBSTITUTE//'%'/'%25'}"
+    OUTPUT_SUBSTITUTE="${OUTPUT_SUBSTITUTE//$'\n'/'%0A'}"
+    OUTPUT_SUBSTITUTE="${OUTPUT_SUBSTITUTE//$'\r'/'%0D'}"
+
+    echo "::set-output name=manifest::${OUTPUT_SUBSTITUTE}"
+
+    if [[ -n "${INPUT_TARGET}" ]]; then
+         echo "${OUTPUT}" >| "${INPUT_TARGET}"
+    fi
 
     if [[ "${INPUT_PRINT}" == "true" || "${INPUT_PRINT}" == "1" ]]; then
         echo "${OUTPUT}"

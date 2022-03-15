@@ -38,7 +38,7 @@ ENV HELM_VERSION=3.8.1
 # renovate: datasource=github-releases depName=viaduct-ai/kustomize-sops
 ENV KSOPS_VERSION=3.0.2
 
-RUN apk add --no-cache bash
+RUN apk add --no-cache bash gnupg
 
 ENTRYPOINT ["/usr/local/bin/entrypoint"]
 COPY overlay /
