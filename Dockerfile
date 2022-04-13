@@ -4,7 +4,7 @@ FROM alpine:3.15 as build
 ENV KUSTOMIZE_VERSION=4.4.0
 
 # renovate: datasource=github-releases depName=helm/helm
-ENV HELM_VERSION=3.8.1
+ENV HELM_VERSION=3.8.2
 
 # renovate: datasource=github-releases depName=viaduct-ai/kustomize-sops
 ENV KSOPS_VERSION=3.0.2
@@ -33,7 +33,7 @@ ENV XDG_CONFIG_HOME=/usr/local/config
 ENV KUSTOMIZE_VERSION=4.4.0
 
 # renovate: datasource=github-releases depName=helm/helm
-ENV HELM_VERSION=3.8.1
+ENV HELM_VERSION=3.8.2
 
 # renovate: datasource=github-releases depName=viaduct-ai/kustomize-sops
 ENV KSOPS_VERSION=3.0.2
