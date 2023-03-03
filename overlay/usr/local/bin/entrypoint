@@ -130,7 +130,7 @@ pushd "${GITHUB_WORKSPACE}/${INPUT_WORKINGDIR}" >/dev/null
     OUTPUT_SUBSTITUTE="${OUTPUT_SUBSTITUTE//$'\n'/'%0A'}"
     OUTPUT_SUBSTITUTE="${OUTPUT_SUBSTITUTE//$'\r'/'%0D'}"
 
-    echo "manifest=${OUTPUT_SUBSTITUTE}" >> ${GITHUB_STATE}
+    echo "manifest=${OUTPUT_SUBSTITUTE}" >> ${GITHUB_OUTPUT}
 
     if [[ -n "${INPUT_TARGET}" ]]; then
          echo "${OUTPUT}" >| "${INPUT_TARGET}"
