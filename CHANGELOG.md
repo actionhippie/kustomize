@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0](https://github.com/actionhippie/kustomize/compare/v1.0.0...v1.1.0) (2023-05-11)
+
+
+### Features
+
+* add gnupg-keyboxd as it is a separate package ([7559451](https://github.com/actionhippie/kustomize/commit/7559451011a59a7be873ae558fabdecb014ef6ca))
+* **deps:** update alpine docker tag to v3.18 ([7b2be37](https://github.com/actionhippie/kustomize/commit/7b2be37e42ec74ff3ab1f10dac20974216702b7c))
+* **deps:** update dependency helm/helm to v3.12.0 ([d28ce0e](https://github.com/actionhippie/kustomize/commit/d28ce0ed4973a1281072a8417f94042404abaf6e))
+
 ## 1.0.0 (2023-05-11)
 
 
