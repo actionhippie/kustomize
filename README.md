@@ -1,6 +1,6 @@
 # kustomize
 
-[![Current Tag](https://img.shields.io/github/v/tag/actionhippie/kustomize?sort=semver)](https://github.com/actionhippie/kustomize) [![Docker Build](https://github.com/actionhippie/kustomize/workflows/docker/badge.svg)](https://github.com/actionhippie/kustomize/actions?query=workflow%3Adocker)
+[![Current Tag](https://img.shields.io/github/v/tag/actionhippie/kustomize?sort=semver)](https://github.com/actionhippie/kustomize) [![Docker Build](https://github.com/actionhippie/kustomize/workflows/docker/badge.svg)](https://github.com/actionhippie/kustomize/actions/workflows/docker.yml)
 
 [GitHub Action](https://github.com/features/actions) to build manifests based on Kustomize.
 
