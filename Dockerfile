@@ -1,4 +1,4 @@
-FROM alpine:3.18 as build
+FROM alpine:3.17 as build
 
 # renovate: datasource=github-releases depName=kubernetes-sigs/kustomize
 ENV KUSTOMIZE_VERSION=4.4.0
@@ -26,7 +26,7 @@ RUN apk add --no-cache curl && \
     *) echo >&2 "error: unsupported architecture '${TARGETARCH}'"; exit 1 ;; \
     esac
 
-FROM alpine:3.18
+FROM alpine:3.17
 ENV XDG_CONFIG_HOME=/usr/local/config
 
 # renovate: datasource=github-releases depName=kubernetes-sigs/kustomize
@@ -38,7 +38,7 @@ ENV HELM_VERSION=3.11.3
 # renovate: datasource=github-releases depName=viaduct-ai/kustomize-sops
 ENV KSOPS_VERSION=4.1.1
 
-RUN apk add --no-cache bash gnupg gnupg-keyboxd
+RUN apk add --no-cache bash gnupg
 
 ENTRYPOINT ["/usr/local/bin/entrypoint"]
 COPY overlay /
