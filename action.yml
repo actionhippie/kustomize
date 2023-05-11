@@ -102,6 +102,6 @@ outputs:
 
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/actionhippie/kustomize:latest'
+  image: 'docker://ghcr.io/actionhippie/kustomize:v1.0.0'
 
 ...
