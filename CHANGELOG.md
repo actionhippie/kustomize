@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/actionhippie/kustomize/compare/v1.1.0...v1.2.0) (2023-05-22)
+
+
+### Features
+
+* **deps:** update dependency viaduct-ai/kustomize-sops to v4.2.0 ([84e2329](https://github.com/actionhippie/kustomize/commit/84e2329003fd2df571355845c130ac07add6a69f))
+
+
+### Bugfixes
+
+* **deps:** update dependency viaduct-ai/kustomize-sops to v4.1.3 ([6c34b2f](https://github.com/actionhippie/kustomize/commit/6c34b2f89ba1528be66fee8c25545962a1ad659b))
+
 ## [1.1.0](https://github.com/actionhippie/kustomize/compare/v1.0.0...v1.1.0) (2023-05-11)
 
 
