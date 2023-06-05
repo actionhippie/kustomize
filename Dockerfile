@@ -29,6 +29,8 @@ RUN apk add --no-cache curl && \
 FROM alpine:3.18
 ENV XDG_CONFIG_HOME=/usr/local/config
 
+RUN apk add --no-cache curl
+
 # renovate: datasource=github-releases depName=kubernetes-sigs/kustomize
 ENV KUSTOMIZE_VERSION=4.4.0
 
