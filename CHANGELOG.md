@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/actionhippie/kustomize/compare/v1.2.1...v1.2.2) (2023-06-05)
+
+
+### Bugfixes
+
+* install missing curl package ([9aadce4](https://github.com/actionhippie/kustomize/commit/9aadce4f83cb3fa2d604782723987214e1930735))
+
 ## [1.2.1](https://github.com/actionhippie/kustomize/compare/v1.2.0...v1.2.1) (2023-05-29)
 
 
