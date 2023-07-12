@@ -47,3 +47,4 @@ COPY overlay /
 COPY --from=build /tmp/kustomize /usr/bin/kustomize
 COPY --from=build /tmp/helm /usr/bin/helm
 COPY --from=build /tmp/ksops /usr/local/config/kustomize/plugin/viaduct.ai/v1/ksops/ksops
+COPY --from=build /tmp/ksops /usr/bin/ksops
