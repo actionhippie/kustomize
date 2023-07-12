@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/actionhippie/kustomize/compare/v1.2.3...v1.3.0) (2023-07-12)
+
+
+### Features
+
+* add ksops to bin folder for exec kustomize plugin ([6984999](https://github.com/actionhippie/kustomize/commit/6984999702f07c8175e70617204e7b140476ec6c))
+
 ## [1.2.3](https://github.com/actionhippie/kustomize/compare/v1.2.2...v1.2.3) (2023-06-19)
 
 
