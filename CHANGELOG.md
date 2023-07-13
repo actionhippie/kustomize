@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.0](https://github.com/actionhippie/kustomize/compare/v1.3.0...v2.0.0) (2023-07-13)
+
+
+### Features
+
+* upgrade kustomize to latest version ([f15605a](https://github.com/actionhippie/kustomize/commit/f15605a11047cb3f32c4e268f948581ad660a8a2))
+
 ## [1.3.0](https://github.com/actionhippie/kustomize/compare/v1.2.3...v1.3.0) (2023-07-12)
 
 
