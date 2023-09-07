@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.4](https://github.com/actionhippie/kustomize/compare/v2.0.3...v2.0.4) (2023-09-07)
+
+
+### Bugfixes
+
+* use new output multiline command ([211cc29](https://github.com/actionhippie/kustomize/commit/211cc29efd9f6972147018ec573b0a3ec19ad46d))
+
 ## [2.0.3](https://github.com/actionhippie/kustomize/compare/v2.0.2...v2.0.3) (2023-08-14)
 
 
