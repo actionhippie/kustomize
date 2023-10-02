@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.0](https://github.com/actionhippie/kustomize/compare/v2.0.5...v2.1.0) (2023-10-02)
+
+
+### Features
+
+* **deps:** update dependency helm/helm to v3.13.0 ([6907309](https://github.com/actionhippie/kustomize/commit/6907309478fc5abe1909ba07cc30089343627472))
+
+
+### Bugfixes
+
+* **deps:** update dependency viaduct-ai/kustomize-sops to v4.2.3 ([fed4819](https://github.com/actionhippie/kustomize/commit/fed4819fbed8a4ceabfe55b30ae86f396a9fab62))
+
 ## [2.0.5](https://github.com/actionhippie/kustomize/compare/v2.0.4...v2.0.5) (2023-09-18)
 
 
