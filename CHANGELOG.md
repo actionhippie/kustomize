@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.0](https://github.com/actionhippie/kustomize/compare/v2.1.1...v2.2.0) (2023-10-23)
+
+
+### Features
+
+* **deps:** update dependency kubernetes-sigs/kustomize to v5.2.1 ([0e0ffa8](https://github.com/actionhippie/kustomize/commit/0e0ffa8ab4d6fa4cfb2365411dcaa791cadbaee3))
+
+
+### Bugfixes
+
+* **deps:** update dependency viaduct-ai/kustomize-sops to v4.2.5 ([daaaf7f](https://github.com/actionhippie/kustomize/commit/daaaf7fbc4b25aa3cc57b0e0aafffd6eebb07cf0))
+
 ## [2.1.1](https://github.com/actionhippie/kustomize/compare/v2.1.0...v2.1.1) (2023-10-16)
 
 
