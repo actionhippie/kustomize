@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.4.0](https://github.com/actionhippie/kustomize/compare/v2.3.0...v2.4.0) (2023-12-11)
+
+
+### Features
+
+* **deps:** update alpine docker tag to v3.19 ([1c190b3](https://github.com/actionhippie/kustomize/commit/1c190b3f44f14b49042486b4535652be8db1ec67))
+* **deps:** update dependency kubernetes-sigs/kustomize to v5.3.0 ([920ad78](https://github.com/actionhippie/kustomize/commit/920ad7809bf7288cbbfb973ba05b4454d77e9d9a))
+
 ## [2.3.0](https://github.com/actionhippie/kustomize/compare/v2.2.1...v2.3.0) (2023-11-27)
 
 
