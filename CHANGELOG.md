@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.1](https://github.com/actionhippie/kustomize/compare/v2.6.0...v2.6.1) (2024-04-15)
+
+
+### Bugfixes
+
+* **deps:** update dependency helm/helm to v3.14.4 ([3fac01c](https://github.com/actionhippie/kustomize/commit/3fac01c6dbbfe063b0e22715a94c994a482c72cd))
+
 ## [2.6.0](https://github.com/actionhippie/kustomize/compare/v2.5.3...v2.6.0) (2024-04-08)
 
 
