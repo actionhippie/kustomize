@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.8.0](https://github.com/actionhippie/kustomize/compare/v2.7.0...v2.8.0) (2024-05-27)
+
+
+### Features
+
+* **deps:** update alpine docker tag to v3.20 ([3bb5056](https://github.com/actionhippie/kustomize/commit/3bb5056dfa181b9a0562f79e8a064c8a60d62e09))
+
+
+### Bugfixes
+
+* **deps:** update dependency helm/helm to v3.15.1 ([338da2c](https://github.com/actionhippie/kustomize/commit/338da2c9d509be17c18252d6d3db405f1738d505))
+* **deps:** update dependency kubernetes-sigs/kustomize to v5.4.2 ([622dd8e](https://github.com/actionhippie/kustomize/commit/622dd8ec22d496eba2f0c3a16a6294cf2fd088ea))
+
 ## [2.7.0](https://github.com/actionhippie/kustomize/compare/v2.6.1...v2.7.0) (2024-05-20)
 
 
