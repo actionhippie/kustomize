@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.4](https://github.com/actionhippie/kustomize/compare/v2.8.3...v2.8.4) (2024-07-22)
+
+
+### Bugfixes
+
+* **deps:** update dependency kubernetes-sigs/kustomize to v5.4.3 ([79b2794](https://github.com/actionhippie/kustomize/commit/79b2794419bd9237fc136338e049791ce6a23d2c))
+
 ## [2.8.3](https://github.com/actionhippie/kustomize/compare/v2.8.2...v2.8.3) (2024-07-15)
 
 
