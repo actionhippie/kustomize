@@ -1,7 +1,7 @@
 FROM alpine:3.20 as build
 
 # renovate: datasource=github-releases depName=kubernetes-sigs/kustomize
-ENV KUSTOMIZE_VERSION=5.4.3
+ENV KUSTOMIZE_VERSION=5.5.0
 
 # renovate: datasource=github-releases depName=helm/helm
 ENV HELM_VERSION=3.16.1
@@ -32,7 +32,7 @@ ENV XDG_CONFIG_HOME=/usr/local/config
 RUN apk add --no-cache curl
 
 # renovate: datasource=github-releases depName=kubernetes-sigs/kustomize
-ENV KUSTOMIZE_VERSION=5.4.3
+ENV KUSTOMIZE_VERSION=5.5.0
 
 # renovate: datasource=github-releases depName=helm/helm
 ENV HELM_VERSION=3.16.1
