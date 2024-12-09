@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.11.0](https://github.com/actionhippie/kustomize/compare/v2.10.1...v2.11.0) (2024-12-09)
+
+
+### Features
+
+* **deps:** update alpine docker tag to v3.21 ([#93](https://github.com/actionhippie/kustomize/issues/93)) ([b8d6bf9](https://github.com/actionhippie/kustomize/commit/b8d6bf99fcdafec9c9e420b7cf21b1fa57c6bce6))
+
 ## [2.10.1](https://github.com/actionhippie/kustomize/compare/v2.10.0...v2.10.1) (2024-11-18)
 
 
