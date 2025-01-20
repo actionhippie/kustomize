@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.12.0](https://github.com/actionhippie/kustomize/compare/v2.11.1...v2.12.0) (2025-01-20)
+
+
+### Features
+
+* **deps:** update dependency helm/helm to v3.17.0 ([#96](https://github.com/actionhippie/kustomize/issues/96)) ([088ec13](https://github.com/actionhippie/kustomize/commit/088ec13819ee7c9e9f88c99e4d9d02efd98aef45))
+* **deps:** update dependency kubernetes-sigs/kustomize to v5.6.0 ([#95](https://github.com/actionhippie/kustomize/issues/95)) ([3849e30](https://github.com/actionhippie/kustomize/commit/3849e30698fbcf5124fb0fcd80326e808a7d079f))
+
 ## [2.11.1](https://github.com/actionhippie/kustomize/compare/v2.11.0...v2.11.1) (2024-12-23)
 
 
