@@ -7,7 +7,7 @@ ENV KUSTOMIZE_VERSION=5.6.0
 ENV HELM_VERSION=3.17.0
 
 # renovate: datasource=github-releases depName=viaduct-ai/kustomize-sops
-ENV KSOPS_VERSION=4.3.2
+ENV KSOPS_VERSION=4.3.3
 
 ARG TARGETARCH
 
@@ -38,7 +38,7 @@ ENV KUSTOMIZE_VERSION=5.6.0
 ENV HELM_VERSION=3.17.0
 
 # renovate: datasource=github-releases depName=viaduct-ai/kustomize-sops
-ENV KSOPS_VERSION=4.3.2
+ENV KSOPS_VERSION=4.3.3
 
 RUN apk add --no-cache bash gnupg gnupg-keyboxd
 
