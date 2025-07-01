@@ -58,12 +58,12 @@ inputs:
   load_restrictor:
     description: |
       Override load restrictions
-    required: true
+    required: false
 
   reorder:
     description: |
       Reorder resources before output
-    required: true
+    required: false
 
   path:
     description: |
