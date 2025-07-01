@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.13.0](https://github.com/actionhippie/kustomize/compare/v2.12.0...v2.13.0) (2025-07-01)
+
+
+### Features
+
+* **deps:** update alpine docker tag to v3.22 ([#103](https://github.com/actionhippie/kustomize/issues/103)) ([9ab248e](https://github.com/actionhippie/kustomize/commit/9ab248e7f9fc42f6e2227febd4f85774cd32aedd))
+* **deps:** update dependency helm/helm to v3.18.0 ([#101](https://github.com/actionhippie/kustomize/issues/101)) ([2ec665d](https://github.com/actionhippie/kustomize/commit/2ec665d612cf9ca7e71d7f4715c6c5f97fb73330))
+* **deps:** update dependency kubernetes-sigs/kustomize to v5.7.0 ([#106](https://github.com/actionhippie/kustomize/issues/106)) ([0808c6f](https://github.com/actionhippie/kustomize/commit/0808c6fce3065e10db887c424fae56d05ee81007))
+* make load restrictor and reorder optional flags ([c71da73](https://github.com/actionhippie/kustomize/commit/c71da734ce155e853fd9b6ff9b95af970fda6709))
+* replace release workflow and add workflow langserver ref ([5669207](https://github.com/actionhippie/kustomize/commit/5669207ea61bbbef1f6b3fa42d83d51bbde98896))
+
+
+### Bugfixes
+
+* **deps:** update dependency helm/helm to v3.17.1 ([#98](https://github.com/actionhippie/kustomize/issues/98)) ([f7bad83](https://github.com/actionhippie/kustomize/commit/f7bad83e747498b18b08d688656cf1c9ff041e4c))
+* **deps:** update dependency helm/helm to v3.17.2 ([#99](https://github.com/actionhippie/kustomize/issues/99)) ([4792a80](https://github.com/actionhippie/kustomize/commit/4792a80d2630f8a0766aa55532be45937ab5736f))
+* **deps:** update dependency helm/helm to v3.17.3 ([#100](https://github.com/actionhippie/kustomize/issues/100)) ([067e7f2](https://github.com/actionhippie/kustomize/commit/067e7f2c73e2d147e77c705fb8d8ed07eb8ca2fb))
+* **deps:** update dependency helm/helm to v3.18.1 ([#102](https://github.com/actionhippie/kustomize/issues/102)) ([17f612b](https://github.com/actionhippie/kustomize/commit/17f612b1a28b092c419490303e536261a2a41c41))
+* **deps:** update dependency helm/helm to v3.18.2 ([#104](https://github.com/actionhippie/kustomize/issues/104)) ([9205ce7](https://github.com/actionhippie/kustomize/commit/9205ce73cb73c38857ee193ab41d470f466a2d45))
+* **deps:** update dependency helm/helm to v3.18.3 ([#105](https://github.com/actionhippie/kustomize/issues/105)) ([47b8567](https://github.com/actionhippie/kustomize/commit/47b85676317ef572e3505db55090ac1fe0b80537))
+* **deps:** update dependency viaduct-ai/kustomize-sops to v4.3.3 ([#97](https://github.com/actionhippie/kustomize/issues/97)) ([a4e7014](https://github.com/actionhippie/kustomize/commit/a4e7014c779100a60bf558107ee23b988600b958))
+
 ## [2.12.0](https://github.com/actionhippie/kustomize/compare/v2.11.1...v2.12.0) (2025-01-20)
 
 
