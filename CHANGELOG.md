@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.13.2](https://github.com/actionhippie/kustomize/compare/v2.13.1...v2.13.2) (2025-07-28)
+
+
+### Bugfixes
+
+* **deps:** update dependency kubernetes-sigs/kustomize to v5.7.1 ([#108](https://github.com/actionhippie/kustomize/issues/108)) ([16a48a4](https://github.com/actionhippie/kustomize/commit/16a48a4afd89c073cd3752743b6e927ac8ade9b4))
+
 ## [2.13.1](https://github.com/actionhippie/kustomize/compare/v2.13.0...v2.13.1) (2025-07-14)
 
 
