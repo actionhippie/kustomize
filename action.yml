@@ -1,7 +1,11 @@
 ---
-name: 'kustomize'
+# yaml-language-server: $schema=https://www.schemastore.org/github-action.json
+name: 'actionhippie-kustomize'
 description: 'Build manifests based on Kustomize'
 author: 'actionhippie'
+branding:
+  icon: box
+  color: green
 
 inputs:
   args:
