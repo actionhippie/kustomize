@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.15.1](https://github.com/actionhippie/kustomize/compare/v2.15.0...v2.15.1) (2025-09-29)
+
+
+### Bugfixes
+
+* **deps:** pin alpine docker tag to 4bcff63 ([#115](https://github.com/actionhippie/kustomize/issues/115)) ([36b55ce](https://github.com/actionhippie/kustomize/commit/36b55ce06b11c6d4368debfce036269f07bffd2d))
+
 ## [2.15.0](https://github.com/actionhippie/kustomize/compare/v2.14.0...v2.15.0) (2025-09-15)
 
 
