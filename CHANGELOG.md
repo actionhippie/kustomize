@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.16.0](https://github.com/actionhippie/kustomize/compare/v2.15.1...v2.16.0) (2025-11-10)
+
+
+### Features
+
+* integrate amd64 and arm64 support ([15f2191](https://github.com/actionhippie/kustomize/commit/15f21911fdcb43da0a6ae953a60da1e070745219))
+
 ## [2.15.1](https://github.com/actionhippie/kustomize/compare/v2.15.0...v2.15.1) (2025-09-29)
 
 
