@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.1.4](https://github.com/actionhippie/kustomize/compare/v3.1.3...v3.1.4) (2026-01-19)
+
+### Bugfixes
+
+* resolve missing quote in action config ([f9f6c0e](https://github.com/actionhippie/kustomize/commit/f9f6c0e39f166b431bd091406b47070ccdb9290b))
+
 ## [3.1.3](https://github.com/actionhippie/kustomize/compare/v3.1.2...v3.1.3) (2026-01-19)
 
 ## [3.1.2](https://github.com/actionhippie/kustomize/compare/v3.1.1...v3.1.2) (2025-12-22)
