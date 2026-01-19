@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.1.5](https://github.com/actionhippie/kustomize/compare/v3.1.4...v3.1.5) (2026-01-19)
+
+### Bugfixes
+
+* always add a v prefix to image refs on release ([04b5b71](https://github.com/actionhippie/kustomize/commit/04b5b712761c4063f8278c214e6651f151f0cba0))
+
+### Miscellaneous
+
+* use correct categories for releaserc to fix changelog ([0c78ade](https://github.com/actionhippie/kustomize/commit/0c78ade20cde1e333534927a0ac7b5faf68391e8))
+
 ## [3.1.4](https://github.com/actionhippie/kustomize/compare/v3.1.3...v3.1.4) (2026-01-19)
 
 ### Bugfixes
