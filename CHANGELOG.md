@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.2.2](https://github.com/actionhippie/kustomize/compare/v3.2.1...v3.2.2) (2026-02-16)
+
+### Dependencies
+
+* **patch:** update dependency helm/helm to v4.1.1 ([#147](https://github.com/actionhippie/kustomize/issues/147)) ([e14e9e3](https://github.com/actionhippie/kustomize/commit/e14e9e325e7eea09e57b3d164897b5ff6ff3e98c))
+* **patch:** update dependency kubernetes-sigs/kustomize to v5.8.1 ([#146](https://github.com/actionhippie/kustomize/issues/146)) ([338ae24](https://github.com/actionhippie/kustomize/commit/338ae2416fcb441bfb48ba7e468d5595819c114c))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([4e4bea1](https://github.com/actionhippie/kustomize/commit/4e4bea13b59506ddc68661505482633d01a289c1))
+* **flake:** updated lockfile [skip ci] ([a11766e](https://github.com/actionhippie/kustomize/commit/a11766ec6a680695f8e0ff2cae8fb2ea078b2f5e))
+
 ## [3.2.1](https://github.com/actionhippie/kustomize/compare/v3.2.0...v3.2.1) (2026-02-02)
 
 ### Dependencies
