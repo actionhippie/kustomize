@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.2.3](https://github.com/actionhippie/kustomize/compare/v3.2.2...v3.2.3) (2026-03-16)
+
+### Dependencies
+
+* **patch:** update dependency helm/helm to v4.1.3 ([#152](https://github.com/actionhippie/kustomize/issues/152)) ([5c6c5cd](https://github.com/actionhippie/kustomize/commit/5c6c5cd26eeb47c17ce6b939f83002e928e2493e))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([fad7790](https://github.com/actionhippie/kustomize/commit/fad77904b309fbd21818c1f3b63f9b412e33ed64))
+* **flake:** updated lockfile [skip ci] ([6578237](https://github.com/actionhippie/kustomize/commit/65782374349ea67d4898a54f02c47c7473bf08a6))
+* **flake:** updated lockfile [skip ci] ([abe7d82](https://github.com/actionhippie/kustomize/commit/abe7d8210ebdbc5109a1e88e0e1ea7400e6275b4))
+* **flake:** updated lockfile [skip ci] ([ae4e4b4](https://github.com/actionhippie/kustomize/commit/ae4e4b4c92e38deb5fc970978e3d851ab78bdd85))
+
 ## [3.2.2](https://github.com/actionhippie/kustomize/compare/v3.2.1...v3.2.2) (2026-02-16)
 
 ### Dependencies
