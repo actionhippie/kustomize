@@ -1,5 +1,19 @@
 # Changelog
 
+## [3.3.0](https://github.com/actionhippie/kustomize/compare/v3.2.3...v3.3.0) (2026-04-13)
+
+### Dependencies
+
+* **minor:** update dependency viaduct-ai/kustomize-sops to v4.5.0 ([#157](https://github.com/actionhippie/kustomize/issues/157)) ([eb54bec](https://github.com/actionhippie/kustomize/commit/eb54bec05de7cb8839f18335efcc86ccbe9c7794))
+* **patch:** update dependency helm/helm to v4.1.4 ([#156](https://github.com/actionhippie/kustomize/issues/156)) ([fc2cfae](https://github.com/actionhippie/kustomize/commit/fc2cfae3723c55e2a0ceafd2fe1f1663651fb233))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([4c915e0](https://github.com/actionhippie/kustomize/commit/4c915e0838223776f2170eec7924c66ae0188350))
+* **flake:** updated lockfile [skip ci] ([4f91ec4](https://github.com/actionhippie/kustomize/commit/4f91ec4ae6cd97e2fd7d21a90f6624d0f485b531))
+* **flake:** updated lockfile [skip ci] ([a3649d2](https://github.com/actionhippie/kustomize/commit/a3649d2c4c2338035d7a5299e8675aa562d27172))
+* **flake:** updated lockfile [skip ci] ([ff4589b](https://github.com/actionhippie/kustomize/commit/ff4589bdb11eb7da8470638068cd8bc20ef2c03a))
+
 ## [3.2.3](https://github.com/actionhippie/kustomize/compare/v3.2.2...v3.2.3) (2026-03-16)
 
 ### Dependencies
