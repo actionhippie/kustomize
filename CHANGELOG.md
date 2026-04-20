@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.3.1](https://github.com/actionhippie/kustomize/compare/v3.3.0...v3.3.1) (2026-04-20)
+
+### Dependencies
+
+* **patch:** update alpine:3.23 docker digest to 5b10f43 ([#159](https://github.com/actionhippie/kustomize/issues/159)) ([23751b7](https://github.com/actionhippie/kustomize/commit/23751b7044e20664d9d178346e85988fc594a827))
+* **patch:** update dependency viaduct-ai/kustomize-sops to v4.5.1 ([#158](https://github.com/actionhippie/kustomize/issues/158)) ([fec013a](https://github.com/actionhippie/kustomize/commit/fec013a7b01c90acc76f32be5fe5b24cee61030a))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([729a93e](https://github.com/actionhippie/kustomize/commit/729a93e06b1b2270873dbfe0cd32061633a3b4b9))
+
 ## [3.3.0](https://github.com/actionhippie/kustomize/compare/v3.2.3...v3.3.0) (2026-04-13)
 
 ### Dependencies
